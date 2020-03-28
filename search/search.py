@@ -1,4 +1,4 @@
-import timawrap
+from sort import timawrap
 
 
 @timawrap.cal_time

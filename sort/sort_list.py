@@ -1,4 +1,4 @@
-import timawrap
+from sort import timawrap
 import random
 
 
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     random.shuffle(l10)
     radix_sort(l10)
     print(l10)
-    
+
     l9 = [2,2,2,2,2,2,34,2,4,5,6]
     random.shuffle(l9)
     count_sort(l9,100)
