@@ -1,1 +1,2 @@
 a = dict()
+print(locals())
