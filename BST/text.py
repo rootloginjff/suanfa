@@ -32,6 +32,36 @@ class BST:
                         break
                 else:
                     break
+    #前序遍历
+    def pre_traverse(self):
+        def pre_order(root):
+            if root:
+                print(root.data)
+                pre_order(root.lchild)
+                pre_order(root.rchild)
+        pre_order(self.root)
 
+    #中序遍历
+    def mid_traverse(self):
+        def mid_order(root):
+            if root:
+                mid_order(root.lchild)
+                print(root.data)
+                mid_order(root.rchild)
+        mid_order(self.root)
+
+    #后序遍历
+    def last_traverse(self):
+        def last_order(root):
+            if root:
+                last_order(root.lchild)
+                last_order(root.rchild)
+                print(root.data)
+        last_order(self.root)
 tree = BST([5,4,6,8,7])
+tree.pre_traverse()
+print('----')
+tree.mid_traverse()
+print('----')
+tree.last_traverse()
 
