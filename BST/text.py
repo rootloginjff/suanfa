@@ -12,6 +12,17 @@ class BST:
             for val in self.li:
                 self.insert(val)
 
+    def query(self,key):
+        p = self.root
+        while p:
+            if key < p.data:
+                p = p.lchild
+            elif key > p.data:
+                p = p.rchild
+            else:
+                return True
+        return False
+
     def insert(self,key):
         if not self.root:
             self.root = BiTreeNode(key)
@@ -59,9 +70,9 @@ class BST:
                 print(root.data)
         last_order(self.root)
 tree = BST([5,4,6,8,7])
-tree.pre_traverse()
-print('----')
-tree.mid_traverse()
-print('----')
-tree.last_traverse()
-
+# tree.pre_traverse()
+# print('----')
+# tree.mid_traverse()
+# print('----')
+# tree.last_traverse()
+print(tree.query(7))
